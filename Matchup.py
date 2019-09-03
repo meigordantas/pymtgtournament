@@ -28,5 +28,14 @@ class Matchup():
     def getPlayers(self):
         print("%s vs %s" % (self.__player_a.getPlayerName(), self.__player_b.getPlayerName()))
 
+    def getPlayer(self,player):
+        if player in (['a','b']):
+            if player == 'a':
+                return self.__player_a
+            else:
+                return self.__player_b
+        else:
+            raise ValueError ('player must be \'a\' or \'b\'')
+
 
 

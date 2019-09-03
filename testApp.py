@@ -1,34 +1,25 @@
+from Matchup import *
 from Player import *
 from Tournament import *
-from Matchup import *
-#
-# t = Tournament('Torneio teste 1')
-# print(t.showTournamentUUID())
-#
-# t.addPlayer(Player(12345,'igor'))
-# t.addPlayer(Player(54321,'falcao'))
-# t.addPlayer(Player(15432,'Silvio'))
-#
-# print(t._Tournament__player_arr)
-#
-# print('Showing players')
-# t.showPlayers()
-# t.updateCurrScoreBoard()
-# print('Showing current scoreboard')
-# t.showCurrScoreBoard()
+import random as rnd
 
-playera = Player(12345,'Player_A')
-playerb = Player(54321,'Player_B')
-mt = Matchup(playera, playerb, 1)
-mt.getPlayers()
+arr = []
+score = 0
+arr.append(Player(12354, 'Player_C'))
+arr.append(Player(12345, 'Player_A'))
+arr.append(Player(54321, 'Player_B'))
+arr.append(Player(15675, 'Player_D'))
+arr.append(Player(12342, 'Player_E'))
+arr.append(Player(78940, 'Player_F'))
 
-try:
-    mt.setWinner(0)
-except ValueError as err:
-    print(err)
+mu = []
+for i in range (0,len(arr)//2):
+    mu.append(Matchup(arr.pop(0), arr.pop(1), 1))
 
-if mt.getWinner() == None:
-    print("Draw")
-else:
-    print("Winner is: %s" % (mt.getWinner().getPlayerName()))
+for i in mu:
+    i.getPlayers()
+#
+# for m in mu:
+#     print (m.getPlayers())
+
 

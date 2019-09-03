@@ -1,4 +1,5 @@
 import secrets as scr
+from Matchup import *
 class Tournament():
     
     def __init__(self, tournament_title):
@@ -6,6 +7,7 @@ class Tournament():
         self.__tournamentUUID     = scr.token_hex(nbytes=16)
         self.__currRound          = 1
         self.__player_arr         = []
+        self.__matchups           = []
         self.__currScoreBoard     = {}
     
     def showTournamentUUID(self):
@@ -25,4 +27,12 @@ class Tournament():
     def showCurrScoreBoard(self):
         for key,val in self.__currScoreBoard.items():
             print("Player: ", key,"| Score: ",val)
-            
+
+    def getLastMatcups(self):
+        return self.__matchups
+
+    def matchupExists(self,player_a,player_b):
+        pass
+                # for each m in self.__matchups:
+                #     if player_a =
+

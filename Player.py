@@ -20,6 +20,9 @@ class Player():
     
     def getScore(self):
         return self.__score
+
+    def setScore(self, score):
+        self.__score += score
     
     def getWinPct(self):
         return self.__score
