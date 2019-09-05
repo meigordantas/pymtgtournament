@@ -13,7 +13,7 @@ class Player():
         return("W:%s\tD:%s\tL:%s" %(self.__wdl['w'], self.__wdl['d'], self.__wdl['l']))
     
     def getPlayerName(self):
-        return self.__player_name
+         return self.__player_name
     
     def getPlayerDci(self):
         return self.__dci_no

@@ -14,12 +14,16 @@ arr.append(Player(78940, 'Player_F'))
 
 mu = []
 for i in range (0,len(arr)//2):
-    mu.append(Matchup(arr.pop(0), arr.pop(1), 1))
+    mu.append(Matchup(arr.pop(0), arr.pop(0), 1))
 
 for i in mu:
     i.getPlayers()
-#
-# for m in mu:
-#     print (m.getPlayers())
+
+testplayer_a = Player(12354, 'Player_C')
+testplayer_b = Player(12345, 'Player_A')
+
+
+
+
 
 

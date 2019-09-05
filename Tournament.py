@@ -32,7 +32,13 @@ class Tournament():
         return self.__matchups
 
     def matchupExists(self,player_a,player_b):
-        pass
-                # for each m in self.__matchups:
-                #     if player_a =
+        for match in self.__matchups:
+            if player_a.getPlayerDci() == match.getPlayer(
+                    'a').getPlayerDci() and player_b.getPlayerDci() == match.getPlayer('b').getPlayerDci():
+                return True
+            elif player_a.getPlayerDci() == match.getPlayer(
+                    'b').getPlayerDci() and player_b.getPlayerDci() == match.getPlayer('a').getPlayerDci():
+                return True
+            else:
+                return False
 
